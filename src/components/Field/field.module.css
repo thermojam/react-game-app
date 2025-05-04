@@ -1,0 +1,28 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin: 90px 0;
+}
+
+.cell {
+
+    font-family: var(--zona-pro);
+    font-weight: bold;
+    color: var(--white);
+    padding: 10px;
+    background-color: rgba(255, 51, 182, 0.80);
+    width: 90px;
+    height: 90px;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+}
+
+.cell:hover {
+    box-shadow: var(--cell);
+}

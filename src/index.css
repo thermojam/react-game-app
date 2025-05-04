@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --zona-pro: "Zona Pro Thin", sans-serif;
+    --reset: rgba(240, 46, 170, 0.4) 0 5px,
+    rgba(240, 46, 170, 0.3) 0 10px,
+    rgba(240, 46, 170, 0.2) 0 15px,
+    rgba(240, 46, 170, 0.1) 0 20px,
+    rgba(240, 46, 170, 0.05) 0 25px;
+    --cell: rgba(255, 150, 216, 0.74) 0 0 0 2px,
+    rgba(240, 46, 170, 0.47) 0 0 0 4px,
+    rgba(247, 47, 175, 0.33) 0 0 0 6px,
+    rgba(240, 46, 170, 0.24) 0 0 0 8px;
+    --white: rgba(240, 240, 243, 100);
+    background: linear-gradient(90deg, #aa076b 0%, #61045f 100%);
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
