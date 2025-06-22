@@ -16,7 +16,7 @@
     rgba(247, 47, 175, 0.33) 0 0 0 6px,
     rgba(240, 46, 170, 0.24) 0 0 0 8px;
     --white: rgba(240, 240, 243, 100);
-    background: linear-gradient(90deg, #aa076b 0%, #61045f 100%);
+    background: linear-gradient(90deg, #1d0413 0%, #40053f 100%);
 }
 
 body {
