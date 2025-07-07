@@ -1,6 +1,6 @@
-import { useDispatch } from './hooks/useRedux'
-import Field from './components/Field/Field.jsx'
-import Information from './components/Information/Information.jsx'
+import { useDispatch } from 'react-redux'
+import Field from './components/Field/Field'
+import Information from './components/Information/Information'
 import styles from './App.module.css'
 
 export const App = () => {

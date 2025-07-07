@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import styles from './information.module.css'
-import { useReduxState } from '../../hooks/useRedux'
+import { useSelector } from 'react-redux'
 
 function InformationLayout({ currentPlayer, isGameEnded, isDraw }) {
     let message
@@ -22,7 +22,10 @@ InformationLayout.propTypes = {
 }
 
 export default function Information() {
-    const { currentPlayer, isGameEnded, isDraw } = useReduxState()
+    const currentPlayer = useSelector(state => state.currentPlayer)
+    const isGameEnded = useSelector(state => state.isGameEnded)
+    const isDraw = useSelector(state => state.isDraw)
+
     return (
         <InformationLayout
             currentPlayer={currentPlayer}

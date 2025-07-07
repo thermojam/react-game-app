@@ -1,5 +1,5 @@
 import styles from './field.module.css'
-import { useReduxState, useDispatch } from '../../hooks/useRedux'
+import { useSelector, useDispatch } from 'react-redux'
 
 const WIN_PATTERNS = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8],
@@ -8,7 +8,10 @@ const WIN_PATTERNS = [
 ]
 
 export default function Field() {
-    const { field, currentPlayer, isGameEnded } = useReduxState()
+    const field = useSelector(state => state.field)
+    const currentPlayer = useSelector(state => state.currentPlayer)
+    const isGameEnded = useSelector(state => state.isGameEnded)
+
     const dispatch = useDispatch()
 
     const checkWinner = (field, player) => {
