@@ -1,24 +1,26 @@
-import { useDispatch } from 'react-redux'
+import React from 'react'
+import { connect } from 'react-redux'
 import Field from './components/Field/Field'
 import Information from './components/Information/Information'
-import styles from './App.module.css'
 
-export const App = () => {
-    const dispatch = useDispatch()
-
-    const resetGame = () => {
-        dispatch({ type: 'RESTART_GAME' })
+class App extends React.Component {
+    handleReset = () => {
+        this.props.dispatch({type: 'RESTART_GAME'})
     }
 
-    return (
-        <div className={styles.app}>
-            <div className={styles.appWrapper}>
-                <Information />
-                <Field />
-                <button className={styles.resetGame} onClick={resetGame}>
-                    Start new game
-                </button>
+    render() {
+        return (
+            <div className="pt-[140px] bg-iphone min-h-screen">
+                <div className="text-center my-[60px]">
+                    <Information/>
+                    <Field/>
+                    <button onClick={ this.handleReset } className="btn-reset mt-6">
+                        Start new game
+                    </button>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
+
+export default connect()(App)

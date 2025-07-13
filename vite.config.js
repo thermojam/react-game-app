@@ -1,22 +1,14 @@
 import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import svgr from "vite-plugin-svgr"
+import tailwindcss from '@tailwindcss/vite'
 
-import Font from 'vite-plugin-font';
+export default defineConfig({
 
-
-export default defineConfig(({mode}) => {
-    const isDev = mode !== "production";
-
-    return {
         plugins: [
-            react({
-                babel: {
-                    plugins: isDev ? ["check-prop-types"] : [],
-                },
-            }),
+            react(),
             [svgr()],
-            [Font.vite()],
+            tailwindcss(),
         ],
 
         server: {
@@ -24,5 +16,4 @@ export default defineConfig(({mode}) => {
             open: true,
         }
 
-    };
 });

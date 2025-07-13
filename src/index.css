@@ -1,11 +1,9 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@import "tailwindcss";
+@tailwind utilities;
 
 :root {
-    --zona-pro: "Zona Pro Thin", sans-serif;
+    --white: rgba(240, 240, 243, 1);
+    --pink-glass: rgba(255, 51, 182, 0.74);
     --reset: rgba(240, 46, 170, 0.4) 0 5px,
     rgba(240, 46, 170, 0.3) 0 10px,
     rgba(240, 46, 170, 0.2) 0 15px,
@@ -15,12 +13,37 @@
     rgba(240, 46, 170, 0.47) 0 0 0 4px,
     rgba(247, 47, 175, 0.33) 0 0 0 6px,
     rgba(240, 46, 170, 0.24) 0 0 0 8px;
-    --white: rgba(240, 240, 243, 100);
-    background: linear-gradient(90deg, #1d0413 0%, #40053f 100%);
 }
 
 body {
-    max-width: 1200px;
-    margin: 0 auto;
-    min-height: 100vh;
+    @apply m-0 p-0 box-border min-h-screen;
+    background: linear-gradient(90deg, #1d0413 0%, #40053f 100%);
+
+}
+
+.bg-iphone {
+    background-image: url('assets/iPhone.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn-reset {
+    width: 290px;
+    height: 80px;
+    font-size: 24px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--pink-glass);
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-reset:hover {
+    box-shadow: var(--reset);
+}
+
+.cell-shadow {
+    box-shadow: var(--cell);
 }
